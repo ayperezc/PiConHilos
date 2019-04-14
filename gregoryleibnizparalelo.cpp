@@ -13,19 +13,6 @@ struct entradas {
     long fin;
 };
 
-void gregLeibParaleloAntoguo(double &acum, long inicio, long fin){  //OJO!!!!!, esto da pi/4
-    double numerador,denominador,fraccion;
-    int alternante = -1;
-    for(long i = inicio; i < fin; i++)
-    {
-        alternante = -alternante;
-        numerador = alternante;
-        denominador = 2*i + 1;
-        fraccion = numerador/denominador;
-        acum = acum + fraccion;
-    }
-}
-
 void* gregLeibParalelo(void* args){  //OJO!!!!!, esto da pi/4
     struct entradas *misEntradas;
     misEntradas = (struct entradas *) args;
